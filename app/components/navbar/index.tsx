@@ -97,15 +97,17 @@ const Navbar: FC = () => {
               Categories
             </Link>
 
-            <Link
-              href="/history"
-              className={twMerge(
-                "font-medium text-gray-500 hover:text-gray-400 md:py-6",
-                pathname === "/history" && "text-blue-600"
-              )}
-            >
-              History
-            </Link>
+            {status == "authenticated" && (
+              <Link
+                href="/history"
+                className={twMerge(
+                  "font-medium text-gray-500 hover:text-gray-400 md:py-6",
+                  pathname === "/history" && "text-blue-600"
+                )}
+              >
+                History
+              </Link>
+            )}
 
             <Link
               className={twMerge(
